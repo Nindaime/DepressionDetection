@@ -6,21 +6,15 @@
 package DepressionDetection.UserModule;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import javafx.collections.FXCollections;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.Axis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Tooltip;
 
 /**
  *
  * @author PETER-PC
  */
 public class UserMentalHealthVisualizer extends AreaChart{
-//    public enum VisualizerType {userVariability, userInstability, userDiagnosisHistory};
-//    private VisualizerType visualizerType;
     private final byte[] userVariabilityDataStream;
     private final byte[] userInstabilityDataStream;
     private final byte[] userDiagnosisHistoryDataStream;

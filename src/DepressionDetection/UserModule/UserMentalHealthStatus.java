@@ -5,7 +5,7 @@
  */
 package DepressionDetection.UserModule;
 
-import javafx.scene.chart.AreaChart;
+import DepressionDetection.QuestionnaireModule.Diagnosis;
 import javafx.scene.chart.NumberAxis;
 
 /**
@@ -17,12 +17,14 @@ public class UserMentalHealthStatus {
     private byte[] userInstability;
     private byte[] userDiagnosisHistory;
     private UserMentalHealthVisualizer visualzer;
+    private Diagnosis diagnosis;
 
-    public UserMentalHealthStatus(byte[] userVariability, byte[] userInstability, byte[] userDiagnosisHistory, UserMentalHealthVisualizer visualzer) {
+    public UserMentalHealthStatus(byte[] userVariability, byte[] userInstability, byte[] userDiagnosisHistory, UserMentalHealthVisualizer visualzer, Diagnosis diagnosis) {
         this.userVariability = userVariability;
         this.userInstability = userInstability;
         this.userDiagnosisHistory = userDiagnosisHistory;
         this.visualzer = new UserMentalHealthVisualizer(new NumberAxis(), new NumberAxis(), userVariability, userInstability, userDiagnosisHistory);
+        this.diagnosis = diagnosis;
     }
 
     public byte[] getUserVariability() {
