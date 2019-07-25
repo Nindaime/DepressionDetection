@@ -1,0 +1,36 @@
+.{
+    -primary-color:  #00AEFF;
+
+}
+
+.anchorPane{
+    -fx-background-color:  #00AEFF;
+}
+
+.statusBar{
+    -fx-background-color:  #00AEFF;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.closePane{
+    -fx-background-color: red;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+.backArrowPane{
+      -fx-background-color: #000000;
+      -fx-background-radius: 30;
+      -fx-border-radius: 30;
+}
+
+.innerAnchorPane{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.chart .chart-vertical-grid-lines{
+    -fx-stroke: grey;
+}
