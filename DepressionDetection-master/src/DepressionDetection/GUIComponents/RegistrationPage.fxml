@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-background-color 0x007ba4ff?>
+
+<HBox id="" prefHeight="504.0" prefWidth="621.0" style="#007BA4" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="DepressionDetection.GUIComponents.RegistrationPageController">
+  <children>
+    <VBox id="" alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" style="#008CBA" HBox.hgrow="ALWAYS" >
+      <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/images(1).jpg" />
+          </image>
+          <VBox.margin>
+            <Insets top="30.0" />
+          </VBox.margin>
+        </ImageView>
+        <TextField fx:id="txtusername" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Username">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </TextField>
+        <TextField fx:id="txtpassword" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Password" VBox.margin="$x1" />
+        <ComboBox fx:id="txtgender" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Gender">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </ComboBox>
+        <TextField fx:id="txtage" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Age">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </TextField>
+        <ComboBox fx:id="txtjobrole" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Job Role">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </ComboBox>
+        <ComboBox fx:id="txtrelationship" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Relationship Status">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </ComboBox>
+        <TextField fx:id="txteducation" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Level of Education">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </TextField>
+        <HBox id="HBox" alignment="CENTER" maxWidth="-Infinity" prefWidth="200.0" spacing="5.0" style="#007BA4">
+          <children>
+            <Button fx:id="register" mnemonicParsing="false" text="Register" />
+          </children>
+        </HBox>
+        <Label text="Already have an account?">
+          <VBox.margin>
+            <Insets top="25.0" />
+          </VBox.margin>
+        </Label>
+        <Button maxWidth="-Infinity" mnemonicParsing="false" text="Login">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+          </VBox.margin>
+        </Button>
+      </children>
+      <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+      <HBox.margin>
+        <Insets right="5.0" />
+      </HBox.margin>
+    </VBox>
+  </children>
+</HBox>

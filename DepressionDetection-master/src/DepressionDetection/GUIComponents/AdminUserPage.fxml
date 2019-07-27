@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-background-color 0x007ba4ff?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Pane layoutX="1.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Pane layoutX="0.0" layoutY="0.0" prefHeight="58.0" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+          <children>
+            <Label layoutX="189.0" layoutY="17.0" text="DEPRESSION DETECTION">
+              <font>
+                <Font size="20.0" />
+              </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="20.0" prefHeight="20.0" prefWidth="24.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+              <children>
+                <Line endX="-87.0" endY="-10.0" layoutX="106.0" layoutY="11.0" startX="-101.0" startY="-1.0" />
+                <Line endX="-104.0" endY="-41.0" layoutX="124.0" layoutY="60.0" startX="-119.0" startY="-50.0" />
+              </children>
+            </Pane>
+            <Pane layoutX="562.0" layoutY="19.0" prefHeight="20.0" prefWidth="24.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+              <children>
+                <Line endX="-81.0" endY="-18.0" layoutX="103.0" layoutY="19.0" startX="-102.0" startY="-1.0">
+                  <stroke>
+                    <Color blue="0.000" green="0.000" red="0.800" fx:id="x1" />
+                  </stroke>
+                </Line>
+                <Line endX="-161.0" endY="-59.0" layoutX="185.0" layoutY="78.0" startX="-184.0" startY="-77.0" stroke="$x1" />
+              </children>
+            </Pane>
+          </children>
+        </Pane>
+        <Pane layoutX="0.0" layoutY="373.0" prefHeight="26.6015625" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+          <children>
+            <Label layoutX="173.0" layoutY="5.0" text="(c) Copyright 2019 Project Depression Detection" />
+          </children>
+        </Pane>
+        <Pane layoutX="200.0" layoutY="67.0" prefHeight="303.0" prefWidth="386.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+          <children>
+            <Pane layoutX="0.0" layoutY="0.0" prefHeight="20.0" prefWidth="386.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+              <children>
+                <Label layoutX="158.0" layoutY="2.0" text="Window Title" />
+              </children>
+            </Pane>
+          </children>
+        </Pane>
+        <Pane layoutX="12.0" layoutY="69.0" prefHeight="301.0" prefWidth="175.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+          <children>
+            <ImageView fitHeight="126.75" fitWidth="169.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="file:/C:/Users/ENGR%20OJERINDE/Pictures/images(1).jpg" />
+              </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="84.0" maxHeight="-Infinity" maxWidth="-Infinity" text="Admin">
+              <font>
+                <Font size="18.0" />
+              </font>
+            </Label>
+            <ListView layoutX="6.0" layoutY="112.0" prefHeight="94.9609375" prefWidth="162.70709228515625" />
+            <Label layoutX="40.0" layoutY="113.0" text="Activity Table">
+              <font>
+                <Font size="15.0" fx:id="x2" />
+              </font>
+            </Label>
+            <Label font="$x2" layoutX="42.0" layoutY="140.0" text="Mental Status" />
+            <Label font="$x2" layoutX="12.0" layoutY="164.0" text="Questionnaire Answer" />
+            <Label font="$x2" layoutX="28.0" layoutY="188.0" text="Post Classification" />
+          </children>
+        </Pane>
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#MentalHealthView_AnchorPane{
+	-fx-border-color:  #008CBA;
+	-fx-border-width: 3px;
+	-fx-background-color: whitesmoke;
+}
+#MentalHealthView_AnchorPane .AppLabel{
+	-fx-font: bold 35 Signika;
+	-fx-background-color: #008CBA;
+	-fx-text-fill: white;
+}
+#MentalHealthView_AnchorPane .PageLabel{
+	-fx-font: bold 20 Signika;
+	/*-fx-background-color: gainsboro;*/
+	-fx-text-fill: #007BA4;
+}
+
+#MentalHealthView_AnchorPane .profileImageContainer{
+	-fx-border-color:  #008CBA;
+	-fx-border-width: 2px;
+}
+
+#MentalHealthView_AnchorPane .profileImageContainer #profileUsername{
+	-fx-background-color: #008CBA;
+	-fx-text-fill: white;
+	-fx-font: bold 15 Arimo;
+}
+
+.button{
+	-fx-padding: 0 5px;
+	-fx-background-color: transparent;
+	-fx-font: 15 Arimo;
+	-fx-border-color: white;
+	-fx-border-radius: 2px;
+}
+
+.AppFooter{
+	-fx-background-color: gainsboro;
+}

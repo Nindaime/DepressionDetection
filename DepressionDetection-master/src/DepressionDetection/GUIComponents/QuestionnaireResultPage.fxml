@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Pane id="x1" fx:id="x2" layoutX="0.0" layoutY="0.0" prefHeight="63.0" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+          <children>
+            <Label id="x2" fx:id="x3" layoutX="203.0" layoutY="18.0" text="Questionnaire Answer">
+              <font>
+                <Font size="20.0" />
+              </font>
+            </Label>
+          </children>
+        </Pane>
+        <Pane layoutX="0.0" layoutY="63.0" prefHeight="337.000022070315" prefWidth="600.0">
+          <children>
+            <ImageView fitHeight="120.0" fitWidth="90.0" layoutX="25.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="file:/C:/Users/ENGR%20OJERINDE/Pictures/images(1).jpg" />
+              </image>
+            </ImageView>
+            <Label layoutX="78.0" layoutY="96.0" text="Username">
+              <font>
+                <Font size="15.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="48.0" text="Time Questionnaire was taken">
+              <font>
+                <Font size="17.0" />
+              </font>
+            </Label>
+            <Pane layoutX="11.0" layoutY="116.0" prefHeight="207.0" prefWidth="572.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+              <children>
+                <Pane layoutX="0.0" layoutY="0.0" prefHeight="26.6015625" prefWidth="572.0" />
+                <VBox layoutX="0.0" layoutY="0.0" prefHeight="207.0" prefWidth="383.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+                  <children>
+                    <Pane prefHeight="27.0" prefWidth="382.9998779296875" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+                      <children>
+                        <Label font="$x1" layoutX="161.0" layoutY="4.0" text="Question" />
+                      </children>
+                    </Pane>
+                  </children>
+                </VBox>
+                <VBox layoutX="394.0" layoutY="0.0" prefHeight="207.0" prefWidth="90.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+                  <children>
+                    <Pane prefHeight="26.6015625" prefWidth="383.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+                      <children>
+                        <Label layoutX="4.0" layoutY="4.0" text="Impact Score">
+                          <font>
+                            <Font size="14.0" />
+                          </font>
+                        </Label>
+                      </children>
+                    </Pane>
+                  </children>
+                </VBox>
+                <VBox layoutX="491.0" layoutY="0.0" prefHeight="207.0" prefWidth="81.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+                  <children>
+                    <Pane prefHeight="26.6015625" prefWidth="383.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+                      <children>
+                        <Label font="$x1" layoutX="15.0" layoutY="4.0" text="Answer" />
+                      </children>
+                    </Pane>
+                  </children>
+                </VBox>
+              </children>
+            </Pane>
+          </children>
+        </Pane>
+      </children>
+    </Pane>
+    <fx:reference source="x2" />
+    <fx:reference source="x3" />
+  </children>
+</AnchorPane>

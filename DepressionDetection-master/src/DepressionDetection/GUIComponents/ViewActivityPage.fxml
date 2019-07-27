@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Button layoutX="70.0" layoutY="357.0" minWidth="20.0" mnemonicParsing="false" prefWidth="20.0" text="1" />
+        <Button layoutX="90.0" layoutY="357.0" minWidth="20.0" mnemonicParsing="false" prefWidth="20.0" text="2" />
+        <Button layoutX="110.0" layoutY="357.0" minWidth="20.0" mnemonicParsing="false" prefWidth="20.0" text="3">
+          <font>
+            <Font size="12.0" />
+          </font>
+        </Button>
+      </children>
+    </Pane>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="42.0" prefWidth="600.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Label layoutX="229.0" layoutY="5.0" text="Activity Table">
+          <font>
+            <Font size="24.0" />
+          </font>
+        </Label>
+      </children>
+    </Pane>
+    <HBox layoutX="14.0" layoutY="42.0" prefHeight="302.0" prefWidth="184.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Label maxWidth="-1.0" text="Username" textAlignment="LEFT">
+          <HBox.margin>
+            <Insets left="80.0" fx:id="x1" />
+          </HBox.margin>
+        </Label>
+      </children>
+    </HBox>
+    <HBox layoutX="198.0" layoutY="42.0" prefHeight="302.0" prefWidth="199.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Label text="Activity Label" HBox.margin="$x1" />
+      </children>
+    </HBox>
+    <HBox layoutX="396.0" layoutY="42.0" prefHeight="302.0" prefWidth="190.0" style="-fx-border-color:black; -fx-border-width:1; -fx-border-style:solid;">
+      <children>
+        <Label text="Activity Time" HBox.margin="$x1" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>
