@@ -5,6 +5,7 @@
  */
 package DepressionDetection.QuestionnaireModule;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -16,6 +17,7 @@ public class Questionnaire {
     private int questionnaireUserID;
     private float cummulativeImpactScore;
     private Diagnosis diagnosis;
+    private ArrayList<String> questions;
 
     public Questionnaire(Date sessionID, int questionnaireUserID) {
         this.sessionID = sessionID;
@@ -54,6 +56,14 @@ public class Questionnaire {
 
     public void setDiagnosis(Diagnosis diagnosis) {
         this.diagnosis = diagnosis;
+    }
+
+    public void setQuestions(ArrayList<String> questions1) {
+        this.questions = questions1;
+    }
+
+    public ArrayList<String> getQuestions() {
+        return questions;
     }
     
     

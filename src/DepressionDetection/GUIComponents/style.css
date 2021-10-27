@@ -1,0 +1,365 @@
+
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+	/*-fx-padding: 0px;*/
+}
+
+.AppLabel{
+	-fx-font: bold 35 Signika;
+	-fx-background-color: #008CBA;
+	-fx-text-fill: white;
+}
+.PageLabel{
+	-fx-font: bold 20 Signika;
+	/*-fx-background-color: gainsboro;*/
+	-fx-text-fill: #007BA4;
+}
+.text-area, .text-area .viewport, .text-area .viewport .content{
+	-fx-display-caret: false;
+	-fx-background-color:transparent;
+	-fx-border-color: transparent;
+	-fx-text-alignment: center;
+	-fx-alignment: center;
+	-fx-editable: false;
+	-fx-padding: 0;
+}
+
+.ComponentContainer, .list-item-container, .post .items{
+	-fx-border-color:  #008CBA;
+	-fx-border-width: 2px;
+	-fx-padding: 0px;
+}
+
+.Container_AnchorPane .ComponentContainer .profileUsername{
+	-fx-background-color: #008CBA;
+	-fx-text-fill: white;
+	-fx-font: bold 15 Arimo;
+	-fx-padding:0px;
+	-fx-margin:0px;
+}
+
+.Container_AnchorPane{
+	-fx-border-color:  #008CBA;
+	-fx-border-width: 3px;
+	-fx-background-color: whitesmoke;
+}
+.Container_AnchorPane .navBar .title{
+	-fx-background-color: #008CBA;
+	-fx-text-fill: white;
+	-fx-font: bold 15px Signika;
+}
+
+.Container_AnchorPane .navBar .navControls{
+	-fx-spacing: 1px;
+}
+
+.Container_AnchorPane .navButtons{
+	-fx-pref-height: 40px;
+	-fx-background-color: #008CBA;
+	-fx-text-fill:#ECECFB;
+	-fx-font: 15px NeoBulletin;
+}
+
+/************************************************************
+	
+					REGISTRATION PAGE
+
+*************************************************************/
+
+#Registration-Page{
+	-fx-background-color: white;
+	-fx-background-size: 500px;
+	-fx-background-position: 55px 90px;
+}
+
+#Registration-Page .button{
+	-fx-padding: 5px 10px;
+	-fx-text-fill: white;
+	-fx-border-insets: 2px;
+}
+
+#Registration-Page .button:hover{
+	-fx-border-color: lightgrey;
+	-fx-text-fill: lightgrey;
+}
+
+/************************************************************
+	
+						FORM MODULE
+
+*************************************************************/
+
+.form{
+	-fx-background-color: rgba(255, 255, 255, .55);
+	-fx-background-image: url("../img/CoarseGrid.png");
+	-fx-border-color: #008CBA;
+	-fx-border-radius: 1px;
+	-fx-border-insets: 0px;
+	-fx-border-width: 2.5px;
+}
+
+.form .separator:horizontal .line{
+	-fx-border-color: #008CBA;
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, .55), 2, 1, 0, 0);
+}
+
+.form .radio-button .radio .dot,.form .radio-button .radio{
+	-fx-border-color: #008CBA;
+	-fx-border-radius: 100%;
+}
+
+.form .radio-button:selected .radio .dot{
+	-fx-background-color: #008CBA;
+}
+
+.form .slider{
+	-fx-block-increment: 20;
+	-fx-show-tick-labels: true;
+	-fx-show-tick-marks: true;
+	-fx-snap-to-ticks: true;
+	-fx-major-tick-unit: 10;
+	-fx-minor-tick-count: 10;
+	-fx-block-increment: 20;
+	-fx-background-color: transparent;
+}
+
+.slider .thumb{
+	-fx-background-color: #008CBA;
+	-fx-cursor: hand;
+}
+
+.form .slider .track{
+	-fx-pref-height: 4px;
+	/*-fx-background-color: #008CBA;*/
+	-fx-border-insets: 0;
+	-fx-border-color: white;
+}
+
+.slider .track{
+	-fx-background-color: #008CBA;
+	-fx-border-color: white;
+	-fx-border-radius: 100%;
+	-fx-pref-width: 6px;
+	-fx-border-insets: 1px;
+}
+
+.form .slider .axis{
+	-fx-tick-label-fill: #008CBA;
+	-fx-tick-label-font: bold 10 Arimo;
+	-fx-background-color: transparent;
+	-fx-effect: dropshadow(one-pass-box, whitesmoke, 5, 5, 0, 0);
+}
+
+.form .slider .axis:bottom .text{
+	-fx-text-fill: #008CBA;
+}
+
+.form .sectionHeaders{
+	-fx-text-fill: #008CBA;
+	-fx-font: bold 18 Arimo;
+	-fx-effect: dropshadow(one-pass-box, whitesmoke, 5, 5, 0, 0);
+	-fx-background-color: transparent;
+}
+
+.form .items{
+	-fx-font: normal 15 Signika;
+	-fx-background-color: transparent;
+	-fx-text-fill: #008CBA;
+	-fx-effect: dropshadow(one-pass-box, whitesmoke, 4, 2, 0, 0);
+}
+
+.form .button{
+	-fx-font-size: 20px;
+	-fx-padding: 5px;
+	-fx-text-fill: whitesmoke;
+	-fx-border-width: 0 1px ;
+}
+
+.form .button:hover{
+	-fx-text-fill: lightgrey;
+	-fx-border-color: lightgrey;
+}
+
+.form .text-field{
+	-fx-border-color: #008CBA;
+	-fx-border-width: 2px;
+	-fx-font-size: 18px;
+	-fx-alignment: center;
+	-fx-text-fill: #008CBA;
+	-fx-prompt-text-fill: #008CBA;
+}
+
+/************************************************************
+	
+						UTILITY WINDOWS
+
+*************************************************************/
+.utilityWindow{
+	-fx-border-color: #008CBA;
+	-fx-border-width: 2px;
+	-fx-background-image: url("../img/Page2.jpg");
+	-fx-background-color: white;
+	-fx-background-size: contain;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: 0 30px;
+}
+
+.profileUsername, .utilityWindow .post .profileUsername{
+	-fx-background-color: #008CBA;
+	-fx-text-fill: white;
+	-fx-font: 10 Arimo;
+	-fx-padding:0px;
+	-fx-margin:0px;
+}
+/************************************************************
+	
+				GENERAL SYSTEM UI COMPONENTS
+
+*************************************************************/
+.button{
+	-fx-padding: 0 5px;
+	-fx-background-color: #008CBA;
+	-fx-font: 15 Arimo;
+	-fx-border-color: white;
+	-fx-border-radius: 2px;
+	-fx-cursor: hand;
+}
+
+.button.close-button{
+	-fx-padding: 0px;
+	-fx-border-width:0px;
+}
+
+.AppFooter, .Container_AnchorPane .navBar{
+	-fx-background-color: gainsboro;
+}
+
+/************************************************************
+	
+						TABLE VIEW
+
+*************************************************************/
+.table-view {
+    -fx-font: 13 Candara;
+    -fx-border-color: steelblue;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell{
+	-fx-border-width: 1px 0;
+    -fx-border-color: steelblue;
+    -fx-background-color: rgba(211, 211, 211, 0.85);
+}
+
+.table-view .table-column{
+    -fx-text-fill: derive(steelblue, -40%);
+    -fx-border-color: transparent steelblue;
+    -fx-border-width: 0 1px;
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler{
+    -fx-background-color: steelblue;
+    -fx-border-color: white;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font: 15 Candara;
+}
+
+.table-view:row-selection .virtual-flow .scroll-bar{
+	-fx-visibility: hidden;
+	-fx-opacity: 1;
+	-fx-background-color: transparent;
+}
+
+#index-column{
+    -fx-alignment: center;
+    -fx-border-color:  white;
+    -fx-background-color: steelblue;
+    -fx-text-fill: white;
+    -fx-font: 15 Arimo;
+}
+.pagination{
+	-fx-page-information-visible: false;
+}
+
+/*to-do*/
+.pagination .pagination-control .left-arrow-button, .pagination .pagination-control .righ-arrow-button{
+	-fx-padding: 0;
+	-fx-border-inset: 0;
+}
+.VBox{
+	-fx-spacing: 5px;
+}
+.scroll-pane{
+	-fx-hbar-policy: never;
+	-fx-vbar-policy: never;
+}
+
+.utilityWindow.scroll-pane{
+	/*-fx-hbar-policy: as-needed;*/
+	-fx-vbar-policy: as-needed;
+	-fx-pannable: true;
+}
+
+.scroll-pane .viewport, .scroll-pane, .VBox {
+	-fx-background-color: transparent;
+}
+
+.list-item-container, .post .items{
+	-fx-border-width: 1px 0;
+	-fx-padding: 0px;
+	-fx-cursor: hand;
+	-fx-background-color: rgba(255, 255, 255, .90);
+}
+
+.post .items{
+	-fx-border-width: 1px;
+}
+
+.list-item-container .label{
+	-fx-font: bold 12px Arimo;
+	-fx-background-color: transparent;
+}
+
+.list-item-container .label-main{
+	-fx-font: bold 18px Signika;
+}
+
+.list-item-container:hover{
+	-fx-background-color: gainsboro;
+}
+
+.list-item-container:hover .label-main{
+	-fx-translate-y: -1;
+	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
+
+/************************************************************
+	
+						POST ITEMS
+
+*************************************************************/
+.post .post-caption{
+	-fx-font: normal 14px Signika;
+	-fx-text-fill: #008CBA;
+}
+
+.post .post-caption .text{
+	-fx-effect: dropshadow(one-pass-box, lightgrey, 2px, 2px, 0, 0);
+	-fx-text-alignment: center;
+}
+
+.post .button{
+	-fx-font: normal 10px Signika;
+	-fx-text-fill: white;
+}
+
+/*.post .main{
+	-fx-background-color: rgba(255, 255, 255, .80);
+}*/

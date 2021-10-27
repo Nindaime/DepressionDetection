@@ -1,11 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.RegistrationPageController">
-    
+<AnchorPane id="Registration-Page" prefHeight="600.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.RegistrationPageController">
+   <children>
+      <Pane prefHeight="90.0" prefWidth="594.0" styleClass="AppLabel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="92.0" layoutY="11.0" prefHeight="69.0" prefWidth="411.0" styleClass="AppLabel" text="DEPRESSION DETECTION" />
+            <Button layoutX="537.0" layoutY="27.0" mnemonicParsing="false" styleClass="close-button">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Close%20Window_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" text="Back">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/back-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="196.0" layoutY="101.0" prefHeight="48.0" prefWidth="227.0" styleClass="PageLabel" text="USER REGISTRATION" />
+      <AnchorPane layoutX="81.0" layoutY="162.0" prefHeight="325.0" prefWidth="447.0">
+         <children>
+            <TextField layoutX="17.0" layoutY="54.0" prefHeight="34.0" prefWidth="207.0" promptText="Username" />
+            <PasswordField layoutX="236.0" layoutY="54.0" prefHeight="34.0" prefWidth="200.0" promptText="Password" />
+            <Separator layoutX="8.0" layoutY="119.0" prefHeight="7.0" prefWidth="431.0" />
+            <Slider layoutX="160.0" layoutY="176.0" max="60.0" min="10.0" prefHeight="14.0" prefWidth="200.0" />
+            <Group layoutX="171.0" layoutY="218.0">
+               <children>
+                  <RadioButton layoutX="-15.0" mnemonicParsing="false" styleClass="items" text="Male" />
+                  <RadioButton layoutX="115.0" mnemonicParsing="false" styleClass="items" text="Female" />
+               </children>
+            </Group>
+            <Label layoutX="17.0" layoutY="14.0" styleClass="sectionHeaders" text="Login Details" />
+            <Label layoutX="16.0" layoutY="142.0" styleClass="sectionHeaders" text="Personal Details" />
+            <Label layoutX="74.0" layoutY="173.0" styleClass="items" text="Age" />
+            <Label layoutX="76.0" layoutY="220.0" styleClass="items" text="Gender" />
+            <Label layoutX="74.0" layoutY="269.0" styleClass="items" text="User Type" />
+            <RadioButton layoutX="158.0" layoutY="269.0" mnemonicParsing="false" styleClass="items" text="User" />
+            <RadioButton layoutX="286.0" layoutY="269.0" mnemonicParsing="false" styleClass="items" text="Admin" />
+         </children>
+         <styleClass>
+            <String fx:value="form" />
+            <String fx:value="login-window" />
+         </styleClass>
+      </AnchorPane>
+      <Button contentDisplay="RIGHT" layoutX="461.0" layoutY="507.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="111.0" text="Register">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/log-in.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="13.0" layoutY="570.0" prefHeight="30.0" prefWidth="594.0" styleClass="AppFooter" text="© Copyright 2020 Project Depression Detection on Social Media Platform" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+   <styleClass>
+      <String fx:value="Container_AnchorPane" />
+      <String fx:value="utilityWindow" />
+   </styleClass>
 </AnchorPane>

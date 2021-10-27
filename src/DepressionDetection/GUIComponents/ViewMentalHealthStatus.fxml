@@ -1,81 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="anchorPane" fx:id="anchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #00AEFF;" styleClass="areaChart" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.ViewMentalHealthStatusController">
-    <children>
-        <Pane layoutX="786.0" layoutY="261.0" prefHeight="200.0" prefWidth="200.0" />
-        <AnchorPane id="statusBar" layoutX="400.0" prefHeight="49.0" prefWidth="1000.0" style="-fx-background-color: #00AEFF; -fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../styles/viewMentalHealthStatusStyle.css" AnchorPane.bottomAnchor="651.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <Pane id="backArrowPane" fx:id="backArrowPane" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #000000; -fx-background-radius: 30; -fx-border-radius: 30;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
-                    <children>
-                        <Text fill="WHITE" layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="←">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Text>
-                    </children>
-                </Pane>
-                <Text id="statusBarText" fill="#fceeee" layoutX="381.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depression Detection" AnchorPane.leftAnchor="381.0" AnchorPane.rightAnchor="381.6728515625" AnchorPane.topAnchor="6.1533203125">
-                    <font>
-                        <Font size="30.0" />
-                    </font>
-                </Text>
-                <Pane id="closePane" fx:id="closePane" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red; -fx-background-radius: 30; -fx-border-radius: 30;" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
-                    <children>
-                        <Text fill="WHITE" layoutX="13.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Text>
-                    </children></Pane>
-            </children>
-        </AnchorPane>
-        <Pane id="innerAnchorPane" layoutX="443.0" layoutY="75.0" prefHeight="625.0" prefWidth="1066.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0">
-            <children>
-                <AnchorPane id="userDetailsPane" layoutX="856.0" layoutY="108.0" maxHeight="200.0" maxWidth="200.0" prefHeight="200.0" prefWidth="170.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #00AEFF;">
-                    <children>
-                        <ImageView id="userImage" fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
-                            <image>
-                                <Image url="@../../../images/profile_pic.png" />
-                            </image></ImageView>
-                        <Text id="userNameText" fx:id="userName" fill="WHITE" layoutX="16.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jo-Amadi Victor" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.4">
-                            <font>
-                                <Font size="18.0" />
-                            </font>
-                        </Text>
-                    </children>
-                </AnchorPane>
-                <AreaChart id="areaChart" fx:id="areaChart" layoutX="26.0" layoutY="108.0" prefHeight="400.0" prefWidth="813.0">
-                    <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                        <NumberAxis side="LEFT" />
-                    </yAxis>
-                </AreaChart>
-                <Pane id="copyRightPane" layoutX="13.0" layoutY="536.0" prefHeight="50.0" prefWidth="1040.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 10;">
-                    <children>
-                        <Text fill="WHITE" layoutX="156.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2019 Project Depression Detection on Social Media Platform">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Text>
-                    </children>
-                </Pane>
-                <Text fx:id="healthReportTitle" layoutX="249.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00AEFF;" text="(DIAGNOSIS HISTORY) VISUALIZE MENTAL HEALTH">
-                    <font>
-                        <Font size="23.0" />
-                    </font>
-                </Text>
-            </children></Pane>
-    </children>
+<AnchorPane prefHeight="420.0" prefWidth="390.0" styleClass="utilityWindow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.ViewMentalHealthStatusController">
+   <children>
+      <Label alignment="CENTER" layoutX="103.0" layoutY="14.0" prefHeight="48.0" prefWidth="260.0" styleClass="PageLabel" text="MHS - INSTABILITY" wrapText="true">
+         <tooltip>
+            <Tooltip id="ttMHS" text="Empty Tooltip" />
+         </tooltip></Label>
+      <VBox layoutX="14.0" layoutY="14.0" styleClass="ComponentContainer">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/face3.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="60.0" styleClass="profileUsername" text="Otto_Rondan" />
+         </children>
+      </VBox>
+      <LineChart layoutX="14.0" layoutY="116.0" prefHeight="286.0" prefWidth="361.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
 </AnchorPane>

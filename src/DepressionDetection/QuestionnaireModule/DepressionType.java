@@ -12,7 +12,7 @@ package DepressionDetection.QuestionnaireModule;
 public enum DepressionType {
     General(0, "No Depression Disorder"),
     SAD(100, "Seasonal Affective Disorder"),
-    Dsythmia(200, "Persistent Depression Disorder"),
+    Dysthymia(200, "Persistent Depression Disorder"),
     PDD(300, "Postpartum Depression"),
     PMDD(400, "Premenstrual Dysphoric Disorder"),
     SD(500, "Situational Depression"),
@@ -37,8 +37,8 @@ public enum DepressionType {
         return SAD;
     }
 
-    public static DepressionType getDsythmia() {
-        return Dsythmia;
+    public static DepressionType getDysthymia() {
+        return Dysthymia;
     }
 
     public static DepressionType getPDD() {

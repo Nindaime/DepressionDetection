@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="390.0" styleClass="utilityWindow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.QuestionnaireResultPage2Controller">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" styleClass="ComponentContainer">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/face3.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="60.0" styleClass="profileUsername" text="Otto_Rondan" />
+         </children>
+      </VBox>
+      <Pagination layoutX="255.0" layoutY="216.0" pageCount="5" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0" />
+      <TableView editable="true" layoutX="8.0" layoutY="133.0" prefHeight="243.0" prefWidth="376.0">
+         <columns>
+            <TableColumn id="index-column" prefWidth="26.0" text="#" />
+            <TableColumn prefWidth="239.0" text="Question" />
+            <TableColumn prefWidth="40.0" text="Ans" />
+            <TableColumn prefWidth="70.0" text="ImpScore" />
+         </columns>
+      </TableView>
+      <TextArea editable="false" layoutX="103.0" layoutY="14.0" prefHeight="76.0" prefWidth="254.0" styleClass="PageLabel" text="Questionnaire Answered @ Question ID (time)" wrapText="true" />
+   </children>
+</AnchorPane>

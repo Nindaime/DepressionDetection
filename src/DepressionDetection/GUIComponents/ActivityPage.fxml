@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="390.0" styleClass="utilityWindow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.ViewActivityPageController">
+   <children>
+      <Pagination layoutX="245.0" layoutY="206.0" pageCount="5" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView layoutX="7.0" layoutY="9.0" prefHeight="359.0" prefWidth="376.0">
+        <columns>
+            <TableColumn id="index-column" prefWidth="26.0" text="#" />
+          <TableColumn prefWidth="86.0" text="Username" />
+          <TableColumn prefWidth="102.0" text="Activity Name" />
+            <TableColumn prefWidth="161.0" text="Activity Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

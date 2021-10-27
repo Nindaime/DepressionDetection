@@ -1,11 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.FeedPageController">
-    
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="390.0" styleClass="utilityWindow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DepressionDetection.GUIComponents.QuestionnaireResultPageController">
+   <children>
+      <Slider layoutX="369.0" layoutY="17.0" orientation="VERTICAL" prefHeight="386.0" prefWidth="14.0" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="15.0" prefHeight="390.0" prefWidth="355.0" styleClass="ComponentContainer" vbarPolicy="NEVER">
+         <content>
+            <VBox prefHeight="326.0" prefWidth="282.0" spacing="5.0">
+               <children>
+                  <AnchorPane id="AnchorPane" prefHeight="100.0" prefWidth="278.0" styleClass="list-item-container" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="lblUsername" layoutX="14.0" layoutY="14.0" text="Username">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDiagnosis" layoutX="206.0" layoutY="14.0" text="Diagnosis">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                           <contextMenu>
+                              <ContextMenu fx:id="ctMDiagnosis">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </Label>
+                        <Label fx:id="lblQuestionTime" layoutX="9.0" layoutY="71.0" stylesheets="@style.css" text="Questionnaire Answered @ Question ID (time)">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMain" alignment="CENTER" layoutX="36.0" layoutY="37.0" prefHeight="26.0" prefWidth="225.0" styleClass="label-main" text="QUESTIONNAIRE RESULT 1">
+                           <font>
+                              <Font name="Signika-Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="AnchorPane" prefHeight="100.0" prefWidth="278.0" styleClass="list-item-container" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="lblUsername1" layoutX="14.0" layoutY="14.0" text="Username">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDiagnosis1" layoutX="206.0" layoutY="14.0" text="Diagnosis">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                           <contextMenu>
+                              <ContextMenu fx:id="ctMDiagnosis1">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </Label>
+                        <Label fx:id="lblQuestionTime1" layoutX="9.0" layoutY="71.0" stylesheets="@style.css" text="Questionnaire Answered @ Question ID (time)">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMain1" alignment="CENTER" layoutX="61.0" layoutY="37.0" prefHeight="26.0" prefWidth="157.0" styleClass="label-main" text="QUESTIONNAIRE 1">
+                           <font>
+                              <Font name="Signika-Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="115.0" prefHeight="100.0" prefWidth="278.0" styleClass="list-item-container" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="lblUsername11" layoutX="14.0" layoutY="14.0" text="Username">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDiagnosis11" layoutX="206.0" layoutY="14.0" text="Diagnosis">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                           <contextMenu>
+                              <ContextMenu fx:id="ctMDiagnosis11">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </Label>
+                        <Label fx:id="lblQuestionTime11" layoutX="9.0" layoutY="71.0" stylesheets="@style.css" text="Questionnaire Answered @ Question ID (time)">
+                           <font>
+                              <Font name="Arimo Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMain11" alignment="CENTER" layoutX="61.0" layoutY="37.0" prefHeight="26.0" prefWidth="157.0" styleClass="label-main" text="QUESTIONNAIRE 1">
+                           <font>
+                              <Font name="Signika-Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
 </AnchorPane>

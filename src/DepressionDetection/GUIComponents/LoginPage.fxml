@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" styleClass="utilityWindow" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="DepressionDetection.GUIComponents.LoginPageController">
+   <children>
+      <Button layoutX="350.0" layoutY="24.0" mnemonicParsing="false" styleClass="close-button">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Close%20Window_24px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="68.0" layoutY="86.0" prefHeight="228.0" prefWidth="264.0">
+         <children>
+            <TextField layoutX="18.0" layoutY="66.0" promptText="Username" />
+            <PasswordField alignment="CENTER" layoutX="18.0" layoutY="121.0" promptText="Password" />
+            <Button layoutX="19.0" layoutY="180.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" text="Login" />
+            <Button layoutX="131.0" layoutY="180.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" text="Register" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/LoginLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="login-window" />
+            <String fx:value="form" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>
