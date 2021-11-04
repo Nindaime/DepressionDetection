@@ -21,6 +21,14 @@ public abstract class User implements Comparable<User>{
         this.USERTYPE = USERTYPE;
     }
 
+    public static UserType getUserTypeFromString(String type){
+        switch (type){
+            case "Admin":
+                return UserType.Admin;
+            default:
+                return UserType.SocialMediaUser;
+        }
+    }
     public int getUSERID() {
         return USERID;
     }

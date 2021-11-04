@@ -31,59 +31,56 @@ public class DatabaseUtilityClass {
     public static List<User> getUserList(){
         String sql = "SELECT * FROM User ORDER BY USERID";
         List<User> userList = new ArrayList<>();
-        Connection connection = DBUtil.getConnection();
+        try(Connection connection = DBUtil.getConnection()){
 
-        try(PreparedStatement preparedStatement =
-                     connection.prepareStatement(sql));
-            ResultSet resultSet = preparedStatement.executeQuery()){
-            while (resultSet.next()) {
-                int USERID = resultSet.getInt();
-                String USERNAME = resultSet.getString();
-                String USERTYPE = resultSet.getString();
-
-                User user = new User(USERID, USERNAME, USERTYPE);
-                userList.add(user);
-            }
-            return userList;
-        }catch(SQLException exception) {
-            throw new Exception(exception.getMessage());
-        }
-    }
-    
-    public static SocialMediaUser getFriendList(String username){
-        String sql = "SELECT * FROM User WHERE USERNAME = ?";
-        Connection connection = DBUtil.getConnection();
-        try (PreparedStatement preparedStatement =
-                connection.prepareStatement(sql)) {
-            preparedStatement.setString(1, username);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                String [] friendList = resultSet.getString();
-                resultSet.close();
+                while (resultSet.next()) {
+                    int USERID = resultSet.getInt("Userid");
+                    String USERNAME = resultSet.getString("Username");
+                    String USERTYPE = resultSet.getString("Usertype");
+                    SocialMediaUser.RelationshipStatus rsStatus = SocialMediaUser.
+                            getRelationshipStatusFromString(resultSet.getString("RelationshipStatus"));
+                    SocialMediaUser.Gender gender = SocialMediaUser.getGenderFromString(resultSet.getString("Gender"));
+                    String[] friendlist = getFriendList(resultSet.getInt("UserId"));
 
-                SocialMediaUser mediaUser = new SocialMediaUser(null, null, friendList, null, null, null);
-                return mediaUser;
+                    User user = new SocialMediaUser(rsStatus, gender, friendlist, USERID, USERNAME, User.getUserTypeFromString(USERTYPE));
+                    userList.add(user);
+                }
 
-            } else {
-                resultSet.close();
-                return null;
-            }
-        } catch(SQLException exception) {
-            throw new Exception(exception.getMessage());
+        }catch(Exception exception) {
+            exception.printStackTrace();
+        }
+
+        return userList;
+    }
+    
+    public static String[] getFriendList(int userid){
+        String sql = "SELECT * FROM FRIENDS WHERE USER = ?";
+        ArrayList<String> friendList = new ArrayList<>();
+        try(Connection connection = DBUtil.getConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, userid);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next())
+                friendList.add(resultSet.getString("Username"));
+
+            return (String[])friendList.toArray();
+        } catch(Exception exception) {
+           exception.printStackTrace();
         }
 
     }
     
-    public static String getUserActivity(int userId){
+    public static ArrayList<String> getUserActivity(int userId){
         String sql = "SELECT * FROM ActivityTable WHERE User_ID = ?";
-        Connection connection = DBUtil.getConnection();
-        List<String> userActivity = new ArrayList<>();
+        ArrayList<String> userActivity = new ArrayList<>();
+        try(Connection connection = DBUtil.getConnection()){
 
-        try (PreparedStatement preparedStatement =
-                     connection.prepareStatement(sql)) {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, userId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 String activityName = resultSet.getString();
                 String activityTime = resultSet.getString();
                 resultSet.close();
@@ -91,15 +88,14 @@ public class DatabaseUtilityClass {
                 userActivity.add(activityName);
                 userActivity.add(activityTime);
                 resultSet.close();
-                return userActivity;
 
-            } else {
-                resultSet.close();
-                return null;
             }
-        } catch(SQLException exception) {
-            throw new Exception(exception.getMessage());
+
+        } catch(Exception exception) {
+            exception.printStackTrace();
         }
+
+        return userActivity;
 
     }
     
@@ -132,26 +128,27 @@ public class DatabaseUtilityClass {
         }
     }
     
-    public static List<Answer> getQuestionnaireResult){
+    public static ArrayList<Answer> getQuestionnaireResult(){
         String sql = "SELECT * FROM QuestionnaireSession ORDER BY QuestionnaireSessionID";
-        List<Answer> questionnaireResult = new ArrayList<>();
-        Connection connection = DBUtil.getConnection();
+        ArrayList<Answer> questionnaireResult = new ArrayList<>();
+        try(Connection connection = DBUtil.getConnection()){
 
-        try (PreparedStatement preparedStatement =
-                     connection.prepareStatement(sql));
-        ResultSet resultSet = preparedStatement.executeQuery()){
-            while (resultSet.next()) {
-                int userID = resultSet.getInt();
-                String answerID = resultSet.getString();
-                int questionID = resultSet.getInt();
+            PreparedStatement preparedStatement =
+                         connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery()){
+                while (resultSet.next()) {
+                    int userID = resultSet.getInt();
+                    String answerID = resultSet.getString();
+                    int questionID = resultSet.getInt();
 
-                Questionnaire questionnaire = new Questionnaire(userID, answerID, questionID);
-                questionnaireResult.add(questionnaire);
+                    Questionnaire questionnaire = new Questionnaire(userID, answerID, questionID);
+                    questionnaireResult.add(questionnaire);
+                }
             }
-            return questionnaireResult;
-        }catch(SQLException exception) {
-            throw new Exception(exception.getMessage());
+        }catch(Exception exception) {
+            exception.printStackTrace();
         }
+        return questionnaireResult;
     }
     
     public static List<Post> getPostsClassification(){

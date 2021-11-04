@@ -27,6 +27,17 @@ public class SocialMediaUser extends User{
         return relationshipStatus;
     }
 
+    public static RelationshipStatus getRelationshipStatusFromString(String value){
+        switch (value){
+            case "Single":
+                return RelationshipStatus.Single;
+            case "Dating":
+                return RelationshipStatus.Dating;
+            default:
+                return RelationshipStatus.Married;
+        }
+    }
+
     public void setRelationshipStatus(RelationshipStatus relationshipStatus) {
         this.relationshipStatus = relationshipStatus;
     }
@@ -37,6 +48,15 @@ public class SocialMediaUser extends User{
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public static Gender getGenderFromString(String value){
+        switch (value){
+            case "Male":
+                return Gender.Male;
+            default:
+                return Gender.Female;
+        }
     }
 
     public String[] getFriendList() {
